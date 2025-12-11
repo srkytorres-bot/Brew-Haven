@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Brew Haven, Contact, Coffee, Cafe, Reservation, Get in Touch">
+    <meta name="description" content="Contact Brew Haven for inquiries, reservations, and feedback. Visit our cafe or send us a message.">
+    <meta name="author" content="Brew Haven">
+    <title>Contact Us - Brew Haven</title>
+    <link rel="stylesheet" href="../style/form.css">
+    <link rel="icon" href="../assets/img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">☕ Brew Haven</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="get-in-touch" class="section contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Visit Our Cafe</h3>
+                    <div class="contact-details">
+                        <p><strong>📍 Address:</strong><br>
+                        123 Coffee Lane, Downtown District<br>
+                        City, State 12345</p>
+                        
+                        <p><strong>📞 Phone:</strong><br>(555) 123-4567</p>
+                        
+                        <p><strong>✉️ Email:</strong><br>hello@brewhaven.com</p>
+                        
+                        <div class="opening-hours">
+                            <h4>Opening Hours</h4>
+                            <ul class="hours-list">
+                                <li><span>Monday - Friday</span> <span>7:00 AM - 8:00 PM</span></li>
+                                <li><span>Saturday</span> <span>8:00 AM - 9:00 PM</span></li>
+                                <li><span>Sunday</span> <span>8:00 AM - 7:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" action="fback.html" method="GET">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="reservation">Table Reservation</option>
+                                <option value="catering">Catering Services</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Your message..."></textarea>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to newsletter</label>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">☕ Brew Haven</div>
+            <p>Crafting exceptional coffee experiences, one cup at a time.</p>
+            
+            <div class="social-buttons">
+                <a href="#" class="social-btn facebook">Facebook</a>
+                <a href="#" class="social-btn instagram">Instagram</a>
+                <a href="#" class="social-btn twitter">Twitter</a>
+            </div>
+            
+            <p>&copy; 2024 Brew Haven. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

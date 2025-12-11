@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brew Haven - Artisan Coffee Shop offering premium coffee, cozy atmosphere, and fresh pastries. Visit us for an exceptional coffee experience.">
+    <meta name="keywords" content="Coffee Shop, Artisan Coffee, Brew Haven, Espresso, Cappuccino, Cold Brew, Coffee Beans, Pastries, Cozy Cafe">
+    <meta name="author" content="Brew Haven">
+    <title>Brew Haven - Artisan Coffee Shop</title>
+    <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/design.css">
+</head>
+<body>
+    <!-- Welcome Modal - Shows on page load -->
+    <div class="modal-welcome" id="welcomeModal">
+        <div class="modal-content-welcome">
+            <h3>Welcome to Brew Haven!</h3>
+            <p>Get 10% off your first order</p>
+            <a href="javascript:void(0)" class="modal-close-btn" onclick="this.closest('.modal-welcome').style.display='none'">OK</a>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">☕ Brew Haven</div>
+            
+            <!-- Burger Menu -->
+            <input type="checkbox" id="burger-toggle" class="burger-toggle">
+            <label for="burger-toggle" class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="src/form.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <img src="assets/img/coffee background.jpg" alt="Coffee Shop Background" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Brew Haven</h1>
+            <p>Where Every Cup Tells a Story</p>
+            <a href="#menu" class="cta-button">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            
+            <!-- Tabs System -->
+            <div class="tabs">
+                <input type="radio" name="tabs" id="tab1" class="tab-input" checked>
+                <input type="radio" name="tabs" id="tab2" class="tab-input">
+                <input type="radio" name="tabs" id="tab3" class="tab-input">
+                
+                <div class="tab-labels">
+                    <label for="tab1" class="tab-label">Coffee</label>
+                    <label for="tab2" class="tab-label">Non-Coffee</label>
+                    <label for="tab3" class="tab-label">Pastries</label>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- Coffee Tab -->
+                    <div id="tab1-content" class="tab-panel">
+                        <div class="menu-grid">
+                            <!-- Cappuccino -->
+                            <a href="#cappuccino-modal" class="menu-item">
+                                <img src="assets/img/cappuccino.jpg" alt="Cappuccino" class="menu-item-image">
+                                <div class="menu-item-content">
+                                    <h3>Cappuccino</h3>
+                                    <p class="price">$4.75</p>
+                                    <p>Silky smooth microfoam meets robust espresso.</p>
+                                    <span class="view-details">View Details →</span>
+                                </div>
+                            </a>
+
+                            <!-- Caramel Macchiato -->
+                            <a href="#caramel-modal" class="menu-item">
+                                <img src="assets/img/caramel.jpg" alt="Caramel Macchiato" class="menu-item-image">
+                                <div class="menu-item-content">
+                                    <h3>Caramel Macchiato</h3>
+                                    <p class="price">$5.25</p>
+                                    <p>Sweet caramel, vanilla, and espresso.</p>
+                                    <span class="view-details">View Details →</span>
+                                </div>
+                            </a>
+
+                            <!-- Mocha -->
+                            <a href="#mocha-modal" class="menu-item">
+                                <img src="assets/img/mocha.jpg" alt="Mocha" class="menu-item-image">
+                                <div class="menu-item-content">
+                                    <h3>Mocha</h3>
+                                    <p class="price">$5.50</p>
+                                    <p>Rich chocolate meets espresso with steamed milk.</p>
+                                    <span class="view-details">View Details →</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Non-Coffee Tab -->
+                    <div id="tab2-content" class="tab-panel">
+                        <div class="menu-grid">
+                            <!-- Matcha Latte -->
+                            <a href="#matcha-modal" class="menu-item">
+                                <img src="assets/img/matcha.jpg" alt="Matcha Latte" class="menu-item-image">
+                                <div class="menu-item-content">
+                                    <h3>Matcha Latte</h3>
+                                    <p class="price">$5.25</p>
+                                    <p>Ceremonial grade matcha with steamed milk.</p>
+                                    <span class="view-details">View Details →</span>
+                                </div>
+                            </a>
+
+                            <!-- Chai Latte -->
+                            <a href="#chai-modal" class="menu-item">
+                                <img src="assets/img/chai.jpg" alt="Chai Latte" class="menu-item-image">
+                                <div class="menu-item-content">
+                                    <h3>Chai Latte</h3>
+                                    <p class="price">$4.95</p>
+                                    <p>Spiced chai tea with creamy steamed milk.</p>
+                                    <span class="view-details">View Details →</span>
+                                </div>
+                            </a>
+
+                            <!-- Hot Chocolate -->
+                            <a href="#hotchocolate-modal" class="menu-item">
+                                <img src="assets/img/hotchocolate.jpg" alt="Hot Chocolate" class="menu-item-image">
+                                <div class="menu-item-content">
+                                    <h3>Hot Chocolate</h3>
+                                    <p class="price">$4.50</p>
+                                    <p>Rich Belgian chocolate with steamed milk.</p>
+                                    <span class="view-details">View Details →</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Pastries Tab -->
+                    <div id="tab3-content" class="tab-panel">
+                        <div class="menu-grid">
+                            <!-- Butter Croissant -->
+                            <a href="#croissant-modal" class="menu-item">
+                                <img src="assets/img/croissant.jpg" alt="Butter Croissant" class="menu-item-image">
+                                <div class="menu-item-content">
+                                    <h3>Butter Croissant</h3>
+                                    <p class="price">$3.75</p>
+                                    <p>Flaky, buttery, and perfectly golden.</p>
+                                    <span class="view-details">View Details →</span>
+                                </div>
+                            </a>
+
+                            <!-- Blueberry Muffin -->
+                            <a href="#muffin-modal" class="menu-item">
+                                <img src="assets/img/muffin.jpg" alt="Blueberry Muffin" class="menu-item-image">
+                                <div class="menu-item-content">
+                                    <h3>Blueberry Muffin</h3>
+                                    <p class="price">$3.25</p>
+                                    <p>Moist muffin bursting with fresh blueberries.</p>
+                                    <span class="view-details">View Details →</span>
+                                </div>
+                            </a>
+
+                            <!-- Cinnamon Roll -->
+                            <a href="#cinnamonroll-modal" class="menu-item">
+                                <img src="assets/img/cinnamonroll.jpg" alt="Cinnamon Roll" class="menu-item-image">
+                                <div class="menu-item-content">
+                                    <h3>Cinnamon Roll</h3>
+                                    <p class="price">$4.50</p>
+                                    <p>Soft, gooey cinnamon roll with cream cheese frosting.</p>
+                                    <span class="view-details">View Details →</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tooltip -->
+            <div class="tooltip-container">
+                <span class="tooltip">
+                    💡 Price Information
+                    <span class="tooltip-text">All prices include tax. Student discount available with valid ID.</span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden anchor for closing modals -->
+    <a id="closeModal" href="#" style="position: absolute; top: -1000px; left: -1000px; opacity: 0;"></a>
+
+    <!-- Item Modals -->
+    <!-- Cappuccino Modal -->
+    <div id="cappuccino-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="assets/img/cappuccino.jpg" alt="Cappuccino" class="modal-image">
+            <div class="modal-body">
+                <h2>Cappuccino</h2>
+                <p class="modal-price">$4.75</p>
+                <p class="modal-description">The perfect balance of espresso, steamed milk, and velvety microfoam. Our baristas create art in every cup, delivering a smooth and creamy experience with a strong coffee flavor.</p>
+                <div class="modal-details">
+                    <h4>Details:</h4>
+                    <ul>
+                        <li>Traditional Italian recipe</li>
+                        <li>Perfect 1:1:1 ratio of espresso, milk, and foam</li>
+                        <li>Topped with beautiful latte art</li>
+                        <li>Available in 8oz or 12oz sizes</li>
+                        <li>Calories: 120</li>
+                        <li>Allergens: Milk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caramel Macchiato Modal -->
+    <div id="caramel-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="assets/img/caramel.jpg" alt="Caramel Macchiato" class="modal-image">
+            <div class="modal-body">
+                <h2>Caramel Macchiato</h2>
+                <p class="modal-price">$5.25</p>
+                <p class="modal-description">A sweet indulgence featuring vanilla-flavored syrup, freshly steamed milk, espresso, and a beautiful caramel drizzle. The perfect treat for those who love a sweeter coffee experience.</p>
+                <div class="modal-details">
+                    <h4>Details:</h4>
+                    <ul>
+                        <li>House-made vanilla syrup</li>
+                        <li>Premium caramel sauce</li>
+                        <li>Perfectly layered for visual appeal</li>
+                        <li>Can be made iced or hot</li>
+                        <li>Calories: 180</li>
+                        <li>Allergens: Milk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mocha Modal -->
+    <div id="mocha-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="assets/img/mocha.jpg" alt="Mocha" class="modal-image">
+            <div class="modal-body">
+                <h2>Mocha</h2>
+                <p class="modal-price">$5.50</p>
+                <p class="modal-description">For chocolate lovers! Rich premium chocolate sauce meets our signature espresso, topped with steamed milk and finished with whipped cream and a chocolate drizzle.</p>
+                <div class="modal-details">
+                    <h4>Details:</h4>
+                    <ul>
+                        <li>Premium Belgian chocolate</li>
+                        <li>Fresh whipped cream topping</li>
+                        <li>Available with dark or milk chocolate</li>
+                        <li>Can be made iced or hot</li>
+                        <li>Calories: 220</li>
+                        <li>Allergens: Milk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Matcha Latte Modal -->
+    <div id="matcha-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="assets/img/matcha.jpg" alt="Matcha Latte" class="modal-image">
+            <div class="modal-body">
+                <h2>Matcha Latte</h2>
+                <p class="modal-price">$5.25</p>
+                <p class="modal-description">Experience the vibrant green goodness of our ceremonial grade matcha. Stone-ground to perfection and whisked with steamed milk for a smooth, earthy flavor with natural energy.</p>
+                <div class="modal-details">
+                    <h4>Details:</h4>
+                    <ul>
+                        <li>Ceremonial grade matcha from Japan</li>
+                        <li>Traditional bamboo whisk preparation</li>
+                        <li>Naturally caffeine-rich without the jitters</li>
+                        <li>Available hot or iced</li>
+                        <li>Calories: 160</li>
+                        <li>Allergens: Milk (optional)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chai Latte Modal -->
+    <div id="chai-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="assets/img/chai.jpg" alt="Chai Latte" class="modal-image">
+            <div class="modal-body">
+                <h2>Chai Latte</h2>
+                <p class="modal-price">$4.95</p>
+                <p class="modal-description">Warm up with our signature chai blend featuring cinnamon, cardamom, ginger, and cloves. Steeped to perfection and combined with creamy steamed milk for a comforting experience.</p>
+                <div class="modal-details">
+                    <h4>Details:</h4>
+                    <ul>
+                        <li>House-blended chai spices</li>
+                        <li>Brewed fresh throughout the day</li>
+                        <li>Naturally caffeine-free option available</li>
+                        <li>Perfectly sweetened with honey or sugar</li>
+                        <li>Calories: 140</li>
+                        <li>Allergens: Milk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hot Chocolate Modal -->
+    <div id="hotchocolate-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="assets/img/hotchocolate.jpg" alt="Hot Chocolate" class="modal-image">
+            <div class="modal-body">
+                <h2>Hot Chocolate</h2>
+                <p class="modal-price">$4.50</p>
+                <p class="modal-description">Indulge in our rich, decadent hot chocolate made with premium Belgian chocolate. Creamy, smooth, and topped with whipped cream and chocolate shavings for the ultimate treat.</p>
+                <div class="modal-details">
+                    <h4>Details:</h4>
+                    <ul>
+                        <li>Premium Belgian dark chocolate</li>
+                        <li>Steamed to perfect drinking temperature</li>
+                        <li>Topped with fresh whipped cream</li>
+                        <li>Chocolate shavings garnish</li>
+                        <li>Calories: 280</li>
+                        <li>Allergens: Milk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Butter Croissant Modal -->
+    <div id="croissant-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="assets/img/croissant.jpg" alt="Butter Croissant" class="modal-image">
+            <div class="modal-body">
+                <h2>Butter Croissant</h2>
+                <p class="modal-price">$3.75</p>
+                <p class="modal-description">Baked fresh daily using traditional French techniques. Our croissants feature hundreds of delicate, flaky layers with a golden-brown crust and soft, buttery interior.</p>
+                <div class="modal-details">
+                    <h4>Details:</h4>
+                    <ul>
+                        <li>Made with European-style butter</li>
+                        <li>Laminated dough with 81 layers</li>
+                        <li>Baked fresh every morning</li>
+                        <li>Perfectly crisp exterior</li>
+                        <li>Calories: 230</li>
+                        <li>Allergens: Gluten, Milk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blueberry Muffin Modal -->
+    <div id="muffin-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="assets/img/muffin.jpg" alt="Blueberry Muffin" class="modal-image">
+            <div class="modal-body">
+                <h2>Blueberry Muffin</h2>
+                <p class="modal-price">$3.25</p>
+                <p class="modal-description">Our signature blueberry muffin features a moist, tender crumb bursting with fresh blueberries and topped with a sweet crumb topping. The perfect companion to any beverage.</p>
+                <div class="modal-details">
+                    <h4>Details:</h4>
+                    <ul>
+                        <li>Fresh blueberries throughout</li>
+                        <li>Sweet crumb topping</li>
+                        <li>Moist and tender texture</li>
+                        <li>Baked daily in small batches</li>
+                        <li>Calories: 380</li>
+                        <li>Allergens: Gluten, Eggs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cinnamon Roll Modal -->
+    <div id="cinnamonroll-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="assets/img/cinnamonroll.jpg" alt="Cinnamon Roll" class="modal-image">
+            <div class="modal-body">
+                <h2>Cinnamon Roll</h2>
+                <p class="modal-price">$4.50</p>
+                <p class="modal-description">Indulge in our legendary cinnamon roll - a pillowy soft, freshly baked masterpiece swirled with cinnamon-sugar filling and topped with generous cream cheese frosting.</p>
+                <div class="modal-details">
+                    <h4>Details:</h4>
+                    <ul>
+                        <li>Pillowy soft brioche-style dough</li>
+                        <li>Generous cinnamon-sugar swirl throughout</li>
+                        <li>Rich cream cheese frosting topping</li>
+                        <li>Baked fresh throughout the morning</li>
+                        <li>Calories: 420</li>
+                        <li>Allergens: Gluten, Milk, Eggs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="why-choose" class="section">
+        <div class="container">
+            <h2>Why Choose Brew Haven?</h2>
+            <div class="features-combined">
+                <div class="feature-combined">
+                    <div class="feature-image">
+                        <img src="assets/img/beans.jpg" alt="Premium Coffee Beans">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Premium Organic Beans</h3>
+                        <p>Sourced from sustainable, fair-trade farms around the world for the richest flavor.</p>
+                    </div>
+                </div>
+
+                <div class="feature-combined">
+                    <div class="feature-content">
+                        <h3>Expert Baristas</h3>
+                        <p>Trained professionals crafting your perfect cup with precision and care.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/img/art.jpg" alt="Latte Art by Expert Baristas">
+                    </div>
+                </div>
+
+                <div class="feature-combined">
+                    <div class="feature-image">
+                        <img src="assets/img/cozy.jpg" alt="Cozy Coffee Shop Interior">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Cozy Atmosphere</h3>
+                        <p>Comfortable seating, free WiFi, and a welcoming environment for all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="section">
+        <div class="container">
+            <h2>Our Videos</h2>
+            <div class="video-container">
+                <div class="video-item">
+                    <h3>Coffee Brewing Process</h3>
+                    <iframe src="https://www.youtube.com/embed/J4rWPlqf7co" allowfullscreen></iframe>
+                    <p>Learn the art of perfect coffee brewing</p>
+                </div>
+                <div class="video-item">
+                    <h3>Behind the Scenes</h3>
+                    <video controls poster="img/video-poster.jpg">
+                        <source src="assets/vid/Coffee Vid.mp4" type="video/mp4">
+                        <source src="assets/vid/Coffee Vid.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Watch our baristas craft the perfect cup</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-slider">
+                <input type="radio" name="slider" id="slide1" class="slider-input" checked>
+                <input type="radio" name="slider" id="slide2" class="slider-input">
+                <input type="radio" name="slider" id="slide3" class="slider-input">
+                <input type="radio" name="slider" id="slide4" class="slider-input">
+                
+                <div class="slider-container">
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-rating">★★★★★</div>
+                            <p class="review-text">"The best coffee in town! The atmosphere is cozy and the baristas are incredibly skilled."</p>
+                            <p class="review-author">- Sarah M.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-rating">★★★★★</div>
+                            <p class="review-text">"I come here every morning before work. Their pastries are always fresh and delicious!"</p>
+                            <p class="review-author">- John D.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-rating">★★★★☆</div>
+                            <p class="review-text">"Great selection of teas and the staff is always friendly. My go-to spot for meetings."</p>
+                            <p class="review-author">- Emily R.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-rating">★★★★★</div>
+                            <p class="review-text">"The perfect blend of quality coffee and welcoming environment. Highly recommended!"</p>
+                            <p class="review-author">- Michael T.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-nav">
+                    <label for="slide1" class="nav-dot"></label>
+                    <label for="slide2" class="nav-dot"></label>
+                    <label for="slide3" class="nav-dot"></label>
+                    <label for="slide4" class="nav-dot"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Our Story</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded in 2020, Brew Haven began with a simple mission: to bring exceptional coffee and genuine community connections to our neighborhood.</p>
+                    <p>We believe that coffee is more than just a beverage—it's an experience. From sourcing the finest beans to training our passionate baristas, every detail matters.</p>
+                    <p style="margin-top: 1.5rem;">We're committed to sustainability, quality, and creating a welcoming environment where everyone feels at home. Come visit us and taste the difference that care and craftsmanship make.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/img/about pic.jpg" alt="Coffee Shop">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">☕ Brew Haven</div>
+            <p>Crafting exceptional coffee experiences, one cup at a time.</p>
+            
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/WhatDisfrr/" class="social-btn facebook">Facebook</a>
+                <a href="https://www.instagram.com/whatdisfrr/" class="social-btn instagram">Instagram</a>
+                <a href="https://x.com/WhatDisfr" class="social-btn twitter">Twitter</a>
+            </div>
+            
+            <p>&copy; 2024 Brew Haven. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
